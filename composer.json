@@ -1,0 +1,30 @@
+{
+    "name": "karneaud/wppus-api-client",
+    "description": "Client SDK library for WordPress Software Management API",
+    "keywords": [
+        "api-client"
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "docler-labs/api-client-exception": "^1.0 || ^2.0",
+        "ext-json": "*",
+        "psr/container": "^1.0 || ^2.0",
+        "psr/http-client": "^1.0",
+        "php-http/discovery":"^1.17",
+        "psr/http-client-implementation":"*",
+        "psr/http-factory-implementation":"*",
+        "pimple/pimple":"*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wppus\\Client\\": "src/"
+        }
+    },
+    "suggest": {
+        "guzzlehttp/guzzle": "PSR-18 provided by Guzzle 7",
+        "php-http/guzzle6-adapter": "PSR-18 wrapper for Guzzle 6"
+    }
+}
