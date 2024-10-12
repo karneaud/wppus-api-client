@@ -39,6 +39,6 @@ class ResponseHandler
             return $this->bodySerializer->unserializeResponse($response);
         }
     
-        throw $this->responseExceptionFactory->create(sprintf('Server replied with a non-200 status code: %s', $response->getStatusCode()), $response);
+        throw $this->responseExceptionFactory->create(sprintf('code: %s message: %s, original message: %s ', $response->getStatusCode(), $response->getReasonPhrase(),  $this->bodySerializer->unserializeResponse($response)['message'] ), $response);
     }
 }
